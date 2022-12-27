@@ -15,7 +15,7 @@ const IntroductionScreen = () => {
 
       <div className='paragraphs'>
         <p>
-          Server: {process.env.SERVER_NAME}
+          Server: $LOCATION
         </p>
         <p>
           The goal of this app is to simulate evacuation from a building, in case of a fire.
