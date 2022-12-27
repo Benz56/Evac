@@ -15,9 +15,6 @@ const IntroductionScreen = () => {
 
       <div className='paragraphs'>
         <p>
-          Server: %REACT_APP_SERVER_NAME%
-        </p>
-        <p>
           The goal of this app is to simulate evacuation from a building, in case of a fire.
         </p>
         <p>
