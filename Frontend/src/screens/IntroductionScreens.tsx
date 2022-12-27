@@ -15,7 +15,7 @@ const IntroductionScreen = () => {
 
       <div className='paragraphs'>
         <p>
-          Geographic Location:
+          Geographic Location: {GeoLocation()}
         </p>
         <p>
           The goal of this app is to simulate evacuation from a building, in case of a fire.
