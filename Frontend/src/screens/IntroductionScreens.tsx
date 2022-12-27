@@ -15,7 +15,7 @@ const IntroductionScreen = () => {
 
       <div className='paragraphs'>
         <p>
-          Geographic Location: {GeoLocation()}
+          Server: {process.env.SERVER_NAME}
         </p>
         <p>
           The goal of this app is to simulate evacuation from a building, in case of a fire.
@@ -36,13 +36,6 @@ const IntroductionScreen = () => {
       </Link>
     </div>
   )
-}
-
-const GeoLocation = () => {
-  return navigator.geolocation.getCurrentPosition((position) => {
-    return position.coords.latitude + " " + position.coords.longitude;
-  }
-  );
 }
 
 export default IntroductionScreen;
