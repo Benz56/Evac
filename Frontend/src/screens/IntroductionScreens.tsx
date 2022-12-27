@@ -15,11 +15,14 @@ const IntroductionScreen = () => {
 
       <div className='paragraphs'>
         <p>
+          Geographic Location:
+        </p>
+        <p>
           The goal of this app is to simulate evacuation from a building, in case of a fire.
         </p>
         <p>
           You will be asked to complete 4 simulated evacuations. Each simulation takes 2 minutes.
-          During each simulation, The app will show you a route from your current location to a random destination. 
+          During each simulation, The app will show you a route from your current location to a random destination.
           Your goal is to walk towards the destination until the time runs out.
         </p>
         <p>
@@ -27,12 +30,19 @@ const IntroductionScreen = () => {
           which must be submitted before you can begin the next simulation.
         </p>
       </div>
-      
+
       <Link to='/consent' className='button'>
         Next Page
       </Link>
     </div>
   )
+}
+
+const GeoLocation = () => {
+  return navigator.geolocation.getCurrentPosition((position) => {
+    return position.coords.latitude + " " + position.coords.longitude;
+  }
+  );
 }
 
 export default IntroductionScreen;
